@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(start chrome http://localhost:3000)",
+      "Bash(npm run dev:*)",
+      "Bash(code \"c:/Users/Danny''s PC/OneDrive/Documents/Campus-Eats-Landing-Page-main/webapp\")",
+      "Bash(timeout 3 bash:*)",
+      "Bash(start chrome http://localhost:5173)",
+      "Bash(start chrome http://localhost:3000/browse)",
+      "Bash(timeout 5 bash:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

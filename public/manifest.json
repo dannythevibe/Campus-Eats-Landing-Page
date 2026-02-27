@@ -1,0 +1,47 @@
+{
+    "name": "Campus Eats",
+    "short_name": "Campus Eats",
+    "description": "Fast and delicious food delivery for students. Order from your favourite campus restaurants in minutes.",
+    "start_url": "/pwa/home",
+    "scope": "/",
+    "display": "standalone",
+    "display_override": [
+        "standalone",
+        "minimal-ui"
+    ],
+    "background_color": "#fff7ed",
+    "theme_color": "#f97316",
+    "orientation": "portrait-primary",
+    "categories": [
+        "food",
+        "shopping",
+        "lifestyle"
+    ],
+    "lang": "en",
+    "icons": [
+        {
+            "src": "/logo.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/logo.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
