@@ -52,6 +52,7 @@
     "embla-carousel-react": "8.5.1",
     "express": "^5.2.1",
     "express-rate-limit": "^8.2.1",
+    "framer-motion": "^12.34.3",
     "geist": "latest",
     "helmet": "^8.1.0",
     "input-otp": "1.4.1",
