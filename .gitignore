@@ -29,3 +29,5 @@ next-env.d.ts
 
 # nested backup
 Campus-Eats-Landing-Page-main/
+
+.vercel

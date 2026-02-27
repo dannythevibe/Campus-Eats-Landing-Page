@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter, useSearchParams } from "next/navigation"
-import { useEffect, useState } from "react"
+import { useEffect, useState, Suspense } from "react"
 import Image from "next/image"
 
 type OrderStatus = "pending" | "confirmed" | "preparing" | "ready" | "out_for_delivery" | "delivered"
@@ -27,7 +27,7 @@ interface OrderDetails {
   placedAt: string
 }
 
-export default function TrackOrderPage() {
+function TrackOrderContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const orderParam = searchParams.get("order")
@@ -200,8 +200,8 @@ export default function TrackOrderPage() {
                       <div key={step.key} className="flex flex-col items-center" style={{ width: `${100 / statusSteps.length}%` }}>
                         <div
                           className={`w-10 h-10 rounded-full flex items-center justify-center text-xl mb-2 transition-all duration-300 ${isCompleted
-                              ? "bg-gradient-to-r from-orange-500 to-green-500 text-white scale-110 shadow-lg"
-                              : "bg-gray-200 text-gray-400"
+                            ? "bg-gradient-to-r from-orange-500 to-green-500 text-white scale-110 shadow-lg"
+                            : "bg-gray-200 text-gray-400"
                             } ${isCurrent ? "animate-pulse ring-4 ring-orange-200" : ""}`}
                         >
                           {step.icon}
@@ -307,5 +307,13 @@ export default function TrackOrderPage() {
         )}
       </main>
     </div>
+  )
+}
+
+export default function TrackOrderPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-green-50 flex items-center justify-center p-6 text-xl">Loading...</div>}>
+      <TrackOrderContent />
+    </Suspense>
   )
 }
